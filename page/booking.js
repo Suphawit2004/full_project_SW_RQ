@@ -1,7 +1,13 @@
 // ✅ โหลดบริการจาก localStorage หรือใช้ค่าเริ่มต้น
 function loadServices() {
     const serviceSelect = document.getElementById('service');
-    const services = JSON.parse(localStorage.getItem('services')) || [];
+    let services = JSON.parse(localStorage.getItem('services')) || [];
+
+    // เพิ่มบริการเริ่มต้นถ้าไม่มีใน localStorage
+    if (services.length === 0) {
+        services = ["ทาสีมือ", "ต่อเล็บเจล", "ตัดเล็บขบ"];
+        localStorage.setItem('services', JSON.stringify(services));
+    }
 
     serviceSelect.innerHTML = `<option value="">-- กรุณาเลือกบริการ --</option>`;
 
@@ -12,6 +18,7 @@ function loadServices() {
         serviceSelect.appendChild(option);
     });
 }
+
 
 // ✅ โหลดตัวเลือกเวลา (10:00 - 21:00 ทุก 30 นาที)
 function loadTimeOptions() {
