@@ -9,42 +9,45 @@
 </head>
 
 <body>
-
     <header>
         <h2>จองคิวทำเล็บ</h2>
+        <nav>
+            <ul>
+                <li><a href="/page/index.html">หน้าหลัก</a></li>
+                <li><a href="/page/booking_selection.html" class="protected-link">จองคิว</a></li>
+                <li><a href="/page/history.html" class="protected-link">ประวัติการจอง</a></li>
+                <li><a href="/page/profile.html" class="protected-link">โปรไฟล์</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="container">
         <h3>กรอกข้อมูลการจอง</h3>
-
         <label for="name">ชื่อ-นามสกุล</label>
-        <input type="text" id="name" placeholder="กรอกชื่อของคุณ" required>
+        <input type="text" id="name" placeholder="กรอกชื่อของคุณ">
 
         <label for="date">วันที่ต้องการจอง</label>
-        <input type="date" id="date" required>
+        <input type="date" id="date">
 
         <label for="time">เลือกเวลา</label>
-        <select id="time" required></select>
+        <select id="time"></select>
 
         <label for="service">เลือกบริการ</label>
-        <select id="service" required>
-            <option value="">-- กรุณาเลือกบริการ --</option>
-        </select>
+        <select id="service"></select>
 
-        <button id="confirmBooking">ยืนยันการจอง</button>
+        <button id="confirmBooking" disabled>ยืนยันการจอง</button>
         <button id="backButton">ย้อนกลับ</button>
 
         <div id="confirmationSection" style="display:none;">
-            <h3>ข้อมูลการจองของคุณ</h3>
-            <p><strong>ชื่อ:</strong> <span id="confirmName"></span></p>
-            <p><strong>วันที่:</strong> <span id="confirmDate"></span></p>
-            <p><strong>เวลา:</strong> <span id="confirmTime"></span></p>
-            <p><strong>บริการ:</strong> <span id="confirmService"></span></p>
+            <h3>ยืนยันการจอง</h3>
+            <p>ชื่อ: <span id="confirmName"></span></p>
+            <p>วันที่: <span id="confirmDate"></span></p>
+            <p>เวลา: <span id="confirmTime"></span></p>
+            <p>บริการ: <span id="confirmService"></span></p>
         </div>
     </div>
 
     <script src="/page/booking.js"></script>
-
 </body>
 
 </html>

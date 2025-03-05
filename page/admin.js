@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // ตรวจสอบสถานะการเข้าสู่ระบบของผู้ดูแล
+    checkAdminLoginStatus();
+
+    // ตั้งค่าฟังก์ชันสำหรับปุ่มออกจากระบบ
+    const logoutButton = document.getElementById('logoutButton');
+    if (logoutButton) {
+        logoutButton.addEventListener('click', function() {
+            logout();
+        });
+    }
+
     loadServices();
     loadBookingRequests();
 
@@ -8,11 +19,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// ฟังก์ชันตรวจสอบการเข้าสู่ระบบของผู้ดูแล
+function checkAdminLoginStatus() {
+    const isAdminLoggedIn = localStorage.getItem("isAdminLoggedIn");
+
+    // หากผู้ดูแลไม่ได้เข้าสู่ระบบ ให้กลับไปที่หน้า admin-login.html
+    if (isAdminLoggedIn !== "true") {
+        alert("กรุณาเข้าสู่ระบบก่อน!");
+        window.location.href = "/page/admin_login.html";
+    }
+}
+
+// ฟังก์ชันออกจากระบบ
+function logout() {
+    localStorage.removeItem("isAdminLoggedIn"); // ลบสถานะการเข้าสู่ระบบของผู้ดูแล
+    alert("ออกจากระบบแล้ว!");
+    window.location.href = "/page/index.html"; // นำผู้ใช้กลับไปยังหน้าหลัก
+}
+
 // ฟังก์ชันโหลดบริการจาก localStorage หรือกำหนดบริการเริ่มต้น
 function loadServices() {
     const serviceList = document.getElementById('serviceList');
-    const defaultServices = ["ทาสีมือ", "ต่อเล็บเจล", "ตัดเล็บขบ"];
-    let services = JSON.parse(localStorage.getItem('services')) || defaultServices;
+    const services = JSON.parse(localStorage.getItem('services')) || [];
 
     serviceList.innerHTML = '';
     services.forEach(service => {

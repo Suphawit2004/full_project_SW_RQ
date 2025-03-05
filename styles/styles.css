@@ -1,3 +1,5 @@
+/* Base Styles */
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -341,4 +343,130 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+
+/* Booking Page */
+
+.booking-container {
+    max-width: 700px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.booking-container h2 {
+    text-align: center;
+    color: #e91e63;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea,
+.booking-form button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: block;
+}
+
+.booking-form button {
+    background-color: #e91e63;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background-color: #c2185b;
+}
+
+.booking-form label {
+    font-size: 16px;
+    color: #333;
+}
+
+.booking-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.booking-form .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.booking-form .form-row input,
+.booking-form .form-row select {
+    width: calc(50% - 10px);
+}
+
+.booking-summary {
+    background-color: #f8bbd0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-summary h3 {
+    font-size: 20px;
+    color: #d81b60;
+    margin-bottom: 10px;
+}
+
+.booking-summary p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.booking-summary .summary-details {
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.booking-summary .summary-details p {
+    font-weight: bold;
+}
+
+.booking-summary .booking-total {
+    color: #e91e63;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.booking-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.booking-buttons button {
+    width: 48%;
+}
+
+.confirm-btn {
+    background-color: #4caf50;
+}
+
+.confirm-btn:hover {
+    background-color: #388e3c;
+}
+
+.cancel-btn {
+    background-color: #ff5252;
+}
+
+.cancel-btn:hover {
+    background-color: #d32f2f;
 }

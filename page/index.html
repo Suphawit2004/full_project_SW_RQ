@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Min Nail Salon</title>
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/styles/index.css">
 </head>
 
 <body>
@@ -14,12 +14,13 @@
         <nav>
             <ul>
                 <li><a href="/page/index.html">หน้าหลัก</a></li>
-                <li><a href="/page/booking_selection.html">จองคิว</a></li>
-                <li><a href="/page/history.html">ประวัติการจอง</a></li>
-                <li><a href="#">ติดต่อเรา</a></li>
-                <li><a href="/page/profile.html">โปรไฟล์</a></li>
+                <li><a href="/page/booking_selection.html" class="protected-link">จองคิว</a></li>
+                <li><a href="/page/history.html" class="protected-link">ประวัติการจอง</a></li>
+                <li><a href="/page/profile.html" class="protected-link">โปรไฟล์</a></li>
             </ul>
         </nav>
+        <a href="/page/login.html" id="loginButton" class="login-btn">เข้าสู่ระบบ</a>
+        <button id="logoutButton" class="logout-btn" style="display: none;">ออกจากระบบ</button>
     </header>
 
     <div class="banner">
@@ -55,18 +56,7 @@
         <p>💚 Line: <a href="#">@nailbeauty</a></p>
     </footer>
 
-    <script>
-        // ตรวจสอบสถานะการล็อกอินเมื่อโหลดหน้า
-        window.onload = function() {
-            const isLoggedIn = localStorage.getItem('isLoggedIn');
-            const bookingLink = document.getElementById('bookingLink');
-            if (!isLoggedIn && bookingLink) {
-                bookingLink.href = "#";
-                bookingLink.style.pointerEvents = "none";
-                bookingLink.style.color = "gray";
-            }
-        }
-    </script>
+    <script src="login.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>เข้าสู่ระบบผู้ดูแล</h2>
+
+        <!-- ฟอร์มล็อกอิน -->
+        <form id="adminLoginForm">
+            <label for="adminUsername">ชื่อผู้ใช้</label>
+            <input type="text" id="adminUsername" name="username" required placeholder="กรุณากรอกชื่อผู้ใช้">
+
+            <label for="adminPassword">รหัสผ่าน</label>
+            <input type="password" id="adminPassword" name="password" required placeholder="กรุณากรอกรหัสผ่าน">
+
+            <button type="submit">เข้าสู่ระบบ</button>
+        </form>
+    </div>
+
+    <script src="/page/admin_login.js"></script>
+</body>
+
+</html>

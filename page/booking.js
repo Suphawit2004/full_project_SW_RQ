@@ -1,12 +1,8 @@
 // ✅ โหลดบริการจาก localStorage หรือใช้ค่าเริ่มต้น
 function loadServices() {
-    let services = JSON.parse(localStorage.getItem('services')) || [
-        { value: "manicure", text: "ทาสีมือ" },
-        { value: "gel_nails", text: "ต่อเล็บเจล" },
-        { value: "ingrown_nail", text: "ตัดเล็บขบ" }
-    ];
-
     const serviceSelect = document.getElementById('service');
+    const services = JSON.parse(localStorage.getItem('services')) || [];
+
     serviceSelect.innerHTML = `<option value="">-- กรุณาเลือกบริการ --</option>`;
 
     services.forEach(service => {

@@ -1,16 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // ตรวจสอบสถานะล็อกอิน (ยกเว้นหน้า login.html)
-    const currentPage = window.location.pathname.split("/").pop();
-    if (currentPage !== "login.html") {
-        checkLoginStatus();
-    }
-
     // ตั้งค่าฟังก์ชันให้ปุ่มล็อกอินทำงาน
     const loginForm = document.getElementById("loginForm");
     if (loginForm) {
         loginForm.addEventListener("submit", function(event) {
             event.preventDefault();
             login();
+        });
+    }
+
+    // ตั้งค่าฟังก์ชันให้ปุ่ม Admin Only ทำงาน
+    const adminOnlyButton = document.getElementById("adminOnlyButton");
+    if (adminOnlyButton) {
+        adminOnlyButton.addEventListener("click", function() {
+            // นำไปยังหน้า admin-login.html เพื่อให้ผู้ดูแลระบบเข้าสู่ระบบ
+            window.location.href = "/page/admin_login.html";
         });
     }
 
@@ -32,11 +35,17 @@ function login() {
     const username = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value.trim();
 
-    if (username === "test1234" && password === "test1234") {
+    // ตรวจสอบชื่อผู้ใช้และรหัสผ่าน
+    if (username === "admin" && password === "admin1234") {
+        alert("เข้าสู่ระบบผู้ดูแลสำเร็จ!");
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("username", username);
+        window.location.href = "/page/admin.html"; // ไปที่หน้า Admin
+    } else if (username === "test1234" && password === "test1234") {
         alert("เข้าสู่ระบบสำเร็จ!");
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("username", username);
-        window.location.href = "index.html";
+        window.location.href = "index.html"; // ไปที่หน้า index สำหรับผู้ใช้งานทั่วไป
     } else {
         alert("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง!");
     }
@@ -154,3 +163,31 @@ document.addEventListener("DOMContentLoaded", function() {
         loadBookingHistory();
     }
 });
+
+// ฟังก์ชันที่ทำงานเมื่อหน้าเว็บโหลด
+window.onload = function() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    const loginButton = document.getElementById('loginButton');
+    const logoutButton = document.getElementById('logoutButton');
+    const protectedLinks = document.querySelectorAll('.protected-link');
+
+    // If the user is logged in, hide the login button and show the logout button
+    if (isLoggedIn) {
+        loginButton.style.display = "none"; // Hide login button
+        logoutButton.style.display = "block"; // Show logout button
+    } else {
+        // Protect the links by redirecting to the login page
+        protectedLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                window.location.href = '/page/login.html'; // Redirect to login page
+            });
+        });
+    }
+
+    // Handle logout functionality
+    logoutButton.addEventListener('click', function() {
+        localStorage.removeItem('isLoggedIn'); // Remove the logged-in status
+        location.reload(); // Reload the page
+    });
+};
