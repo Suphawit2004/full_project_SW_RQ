@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรไฟล์</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <img src="/image/logo.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="/page/index.html">หน้าหลัก</a></li>
+                <li><a href="/page/booking_selection.html">จองคิว</a></li>
+                <li><a href="/page/history.html">ประวัติการจอง</a></li>
+                <li><a href="#">ติดต่อเรา</a></li>
+                <li><a href="/page/profile.html">โปรไฟล์</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>โปรไฟล์ของฉัน</h2>
+        <div class="profile">
+            <img src="/image/profile.png" alt="รูปโปรไฟล์" class="profile-img">
+            <h2>โปรไฟล์ของคุณ</h2>
+            <p>ชื่อผู้ใช้:Admin</p>
+            <p><strong>เบอร์โทร:081-234-5678</p>
+                <button onclick="editProfile()">แก้ไขข้อมูล</button>
+                <button onclick="logout()">ออกจากระบบ</button>
+
+
+        </div>
+    </div>
+
+    <footer>
+        <p>ช่องทางติดต่อ: โทร <a href="tel:0812345678">081-234-5678</a> | Facebook: <a href="#">Nail Salon</a> | Line: <a href="#">@nailsalon</a> | ที่อยู่: 123 ถ.ความงาม เขตสวยงาม กรุงเทพฯ</p>
+    </footer>
+
+    <script>
+        function editProfile() {
+            let newName = prompt("กรอกชื่อผู้ใช้ใหม่:", document.getElementById("username").innerText);
+            let newPhone = prompt("กรอกเบอร์โทรใหม่:", document.getElementById("phone").innerText);
+            if (newName) document.getElementById("username").innerText = newName;
+            if (newPhone) document.getElementById("phone").innerText = newPhone;
+        }
+
+        function logout() {
+            if (confirm("คุณต้องการออกจากระบบหรือไม่?")) {
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

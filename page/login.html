@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>เข้าสู่ระบบ</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="ชื่อผู้ใช้" required>
+            <input type="password" id="password" placeholder="รหัสผ่าน" required>
+            <button type="submit">เข้าสู่ระบบ</button>
+        </form>
+
+        <div class="social-login">
+            <button class="google-login">เข้าสู่ระบบด้วย Google</button>
+            <button class="facebook-login">เข้าสู่ระบบด้วย Facebook</button>
+        </div>
+
+        <div class="login-options">
+            <a href="#">ลืมรหัสผ่าน?</a> |
+            <a href="/page/register.html">สร้างบัญชีใหม่</a>
+        </div>
+    </div>
+    <footer>
+        <h3>📞 ติดต่อเรา</h3>
+        <p>📍 ที่อยู่: 123 ถนนเล็บสวย เขตบางนา กรุงเทพฯ</p>
+        <p>📞 โทร: 012-345-6789</p>
+        <p>📘 Facebook: <a href="#">NailBeautyShop</a></p>
+        <p>💚 Line: <a href="#">@nailbeauty</a></p>
+    </footer>
+
+    <!-- ✅ โหลด `script.js` หลังจาก DOM โหลดเสร็จ -->
+    <script src="script.js"></script>
+</body>
+
+</html>

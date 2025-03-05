@@ -1,0 +1,344 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fce4ec;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* กล่องจัดกลาง */
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+
+/* สไตล์ของ input, select และปุ่ม */
+
+input,
+select,
+button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: block;
+}
+
+button {
+    background-color: #e91e63;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #c2185b;
+}
+
+
+/* ปรับ header และเมนู */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 75px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e91e63;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* จัดตาราง */
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #e91e63;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f8bbd0;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffc1e3;
+}
+
+
+/* ปรับปุ่มยกเลิก */
+
+.cancel-btn {
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background-color: #d32f2f;
+}
+
+
+/* จัดให้หัวข้ออยู่ตรงกลาง */
+
+h2,
+h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #e91e63;
+    margin-bottom: 15px;
+}
+
+
+/* โปรโมชั่น */
+
+.promotion {
+    background-color: #ffebee;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.promotion img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.promotion h3 {
+    color: #d81b60;
+    font-size: 20px;
+}
+
+.promotion p {
+    font-size: 16px;
+}
+
+
+/* โปรไฟล์ */
+
+.profile {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #e91e63;
+    margin-bottom: 15px;
+}
+
+.profile p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+
+/* ปุ่มออกจากระบบ */
+
+.logout-btn {
+    background-color: #d32f2f;
+    margin-top: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #b71c1c;
+}
+
+
+/* สไตล์หน้า Login */
+
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e91e63;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #c2185b;
+}
+
+.social-login {
+    margin-top: 10px;
+}
+
+.social-login button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.google-login {
+    background-color: #db4437;
+    color: white;
+}
+
+.facebook-login {
+    background-color: #1877f2;
+    color: white;
+}
+
+.login-options {
+    margin-top: 15px;
+}
+
+.login-options a {
+    text-decoration: none;
+    color: #e91e63;
+}
+
+
+/* จัดหน้า Register ให้อยู่กึ่งกลาง */
+
+.register-page {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container {
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+    background-color: #f8bbd0;
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+}
+
+.register-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.register-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ed1d63;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-container button:hover {
+    background-color: #c2185b;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #e91e63;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 25%;
+}
+
+footer a {
+    color: #ffeb3b;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

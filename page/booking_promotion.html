@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จองคิวโปรโมชั่นทำเล็บ</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>จองคิวโปรโมชั่นทำเล็บ</h2>
+        <nav>
+            <ul>
+                <li><a href="/page/index.html">หน้าหลัก</a></li>
+                <li><a href="/page/booking_selection.html">จองคิว</a></li>
+                <li><a href="/page/history.html">ประวัติการจอง</a></li>
+                <li><a href="#">ติดต่อเรา</a></li>
+                <li><a href="/page/profile.html">โปรไฟล์</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h3>กรอกข้อมูลการจอง</h3>
+
+        <label for="date">วันที่ต้องการจอง</label>
+        <input type="date" id="date" required>
+
+        <label for="time">เลือกเวลา</label>
+        <select id="time" required></select>
+
+        <label for="name">ชื่อ-นามสกุล</label>
+        <input type="text" id="name" placeholder="กรอกชื่อของคุณ" required>
+
+        <label for="promotion">เลือกโปรโมชั่น</label>
+        <select id="promotion">
+            <option value="color_luck">ทำสีเล็บเสริมดวง</option>
+            <option value="flower_paint">เพ้นท์เล็บลายดอกไม้</option>
+            <option value="gel_promo">เจลต่อเล็บลด 20%</option>
+        </select>
+
+        <a href="/page/booking_selection.html"><button id="backButton">ย้อนกลับ</button></a>
+    </div>
+
+    <script src="/page/bookiing.js"></script>
+
+</body>
+
+</html>
+
+</html>

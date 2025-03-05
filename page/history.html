@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติการจอง</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>ประวัติการจอง</h2>
+    </header>
+
+    <div class="container">
+        <h3>รายการการจอง</h3>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ชื่อ-นามสกุล</th>
+                    <th>วันที่</th>
+                    <th>เวลา</th>
+                    <th>บริการ</th>
+                    <th>สถานะ</th>
+                    <th>การกระทำ</th>
+                </tr>
+            </thead>
+            <tbody id="historyTableBody">
+                <tr>
+                    <td colspan="6">ไม่มีประวัติการจอง</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button id="clearHistory">ล้างประวัติทั้งหมด</button>
+        <a href="/page/index.html"><button id="backToBooking">กลับหน้าหลัก</button></a>
+    </div>
+
+    <footer>
+        <p>© 2025 NailBeautyShop | <a href="#">ติดต่อเรา</a></p>
+    </footer>
+
+    <script src="history.js"></script>
+
+</body>
+
+</html>

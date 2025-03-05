@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Nail Salon</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <header>
+        <img src="/image/logo.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="/page/index.html">หน้าหลัก</a></li>
+                <li><a href="/page/booking_selection.html">จองคิว</a></li>
+                <li><a href="/page/history.html">ประวัติการจอง</a></li>
+                <li><a href="#">ติดต่อเรา</a></li>
+                <li><a href="/page/profile.html">โปรไฟล์</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <h1>Min Nail Salon</h1>
+        <p>รับทำเล็บทุกรูปแบบ</p>
+        <p>พิกัด: กทม. ตลาดบางนา ตัดข้าวเหนียวหมูปิ้ง บางนา</p>
+        <p>✨ สวย - เร็ว - คุ้มค่า ✨</p>
+    </div>
+
+    <main>
+        <section class="promotion-section">
+            <h2>สีเล็บเสริมดวง</h2>
+            <div class="promotion">
+                <img src="/image/nail1.jpg" alt="สีเล็บเสริมดวง">
+                <p>ดวงดีรับโชค เสริมพลัง ✨</p>
+            </div>
+        </section>
+
+        <section class="promotion-section">
+            <h2>ไอเดียเล็บลายดอกไม้</h2>
+            <div class="promotion">
+                <img src="/image/nail2.png" alt="เล็บลายดอกไม้">
+                <p>โทนสดใส ไทยละมุน มินิมอล 🌸</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>📞 ติดต่อเรา</h3>
+        <p>📍 ที่อยู่: 123 ถนนเล็บสวย เขตบางนา กรุงเทพฯ</p>
+        <p>📞 โทร: 012-345-6789</p>
+        <p>📘 Facebook: <a href="#">NailBeautyShop</a></p>
+        <p>💚 Line: <a href="#">@nailbeauty</a></p>
+    </footer>
+
+    <script>
+        // ตรวจสอบสถานะการล็อกอินเมื่อโหลดหน้า
+        window.onload = function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const bookingLink = document.getElementById('bookingLink');
+            if (!isLoggedIn && bookingLink) {
+                bookingLink.href = "#";
+                bookingLink.style.pointerEvents = "none";
+                bookingLink.style.color = "gray";
+            }
+        }
+    </script>
+</body>
+
+</html>

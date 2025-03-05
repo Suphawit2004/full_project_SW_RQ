@@ -1,0 +1,65 @@
+body {
+    background-color: #ffd9e1;
+    /* สีชมพูอ่อน */
+    font-family: 'Sarabun', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8a5c2;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.banner {
+    background-color: #f8a5c2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+h2 {
+    text-align: center;
+    color: #d63384;
+}
+
+.promotion-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.promotion img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #f8a5c2;
+    text-align: center;
+    padding: 15px;
+    color: white;
+}

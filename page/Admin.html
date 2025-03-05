@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - จัดการการจอง</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>จัดการการจอง</h2>
+    </header>
+
+    <div class="container">
+        <h3>รายการจอง</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ชื่อ</th>
+                    <th>วันที่</th>
+                    <th>เวลา</th>
+                    <th>บริการ</th>
+                    <th>สถานะ</th>
+                    <th>การจัดการ</th>
+                </tr>
+            </thead>
+            <tbody id="bookingList"></tbody>
+        </table>
+
+        <h3>จัดการบริการ</h3>
+        <input type="text" id="newService" placeholder="เพิ่มบริการใหม่">
+        <button id="addService">เพิ่ม</button>
+        <ul id="serviceList"></ul>
+    </div>
+
+    <script src="/page/admin.js"></script>
+
+</body>
+
+</html>

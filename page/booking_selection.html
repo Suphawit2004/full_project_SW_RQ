@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เลือกประเภทการจอง</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="/image/logo.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="/page/index.html">หน้าหลัก</a></li>
+                <li><a href="/page/booking_selection.html">จองคิว</a></li>
+                <li><a href="/page/history.html">ประวัติการจอง</a></li>
+                <li><a href="#">ติดต่อเรา</a></li>
+                <li><a href="/page/profile.html">โปรไฟล์</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h3>กรุณาเลือกประเภทการจองของคุณ</h3>
+
+        <div class="booking-option">
+            <h3>💅 ทำเล็บธรรมดา</h3>
+            <p>บริการทำเล็บมาตรฐาน เช่น ทำเล็บมือ, ทำเล็บเท้า, ตัดแต่งเล็บ</p>
+            <button onclick="redirectToBooking('normal')">จองทำเล็บธรรมดา</button>
+        </div>
+
+        <div class="booking-option">
+            <h3>🎉 โปรโมชั่นทำเล็บ</h3>
+            <p>โปรโมชั่นพิเศษ! ทำสีเล็บเสริมดวง, เพ้นท์เล็บลายดอกไม้, และอื่นๆ</p>
+            <button onclick="redirectToBooking('promotion')">จองโปรโมชั่นทำเล็บ</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 NailBeautyShop</p>
+    </footer>
+
+    <script>
+        function redirectToBooking(type) {
+            // ตรวจสอบว่าผู้ใช้ล็อกอินหรือยัง
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (!isLoggedIn) {
+                alert("กรุณาล็อกอินก่อนทำการจอง");
+                window.location.href = "/page/login.html"; // กลับไปล็อกอินถ้ายังไม่ได้ล็อกอิน
+            } else {
+                if (type === 'normal') {
+                    window.location.href = "/page/booking.html"; // ไปหน้าจองทำเล็บธรรมดา
+                } else if (type === 'promotion') {
+                    window.location.href = "/page/booking_promotion.html"; // ไปหน้าจองโปรโมชั่น
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
