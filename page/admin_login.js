@@ -24,7 +24,7 @@ function adminLogin() {
         alert("เข้าสู่ระบบสำเร็จ!");
         // ตั้งค่าข้อมูลว่าเป็นผู้ดูแล
         localStorage.setItem("isAdminLoggedIn", "true");
-        window.location.href = "/page/admin.html"; // นำผู้ใช้ไปยังหน้า admin
+        window.location.href = "/page/Admin.html"; // นำผู้ใช้ไปยังหน้า admin
     } else {
         alert("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง!");
     }
